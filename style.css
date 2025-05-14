@@ -1,0 +1,374 @@
+/* Estilos para o tema claro (padrão) */
+body {
+    background-color: #f8f9fa; /* Um cinza bem claro */
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 2rem 0;
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme {
+    background-color: #1b1d1f; /* Um cinza escuro */
+    text-decoration-color: #ffffff;
+}
+
+h1.dark-theme {
+    color: #ffffff;
+}
+
+.fullscreen-overlay.dark-theme {
+    background-color: rgba(0, 0, 0, 1); /* Um pouco mais claro que o padrão escuro */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal {
+    width: 80%;
+    margin: 2rem auto;
+    margin-top: 100px;
+    }
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    gap: 0.5rem;
+}
+
+.imgGaleria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.itemGaleria {
+    overflow: hidden;
+}
+
+    .item01 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+}
+
+.item02 {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.item03 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.item04 {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.item05 {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.item06 {
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 5;
+}
+
+.item07 {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 2;
+}
+
+.item08 {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 2;
+}
+
+.item09 {
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 2;
+}
+
+.item10 {
+    grid-column: 3 / span 1;
+    grid-row: 6 / span 1;
+}
+
+.item11 {
+    grid-column: 4 / span 1;
+    grid-row: 6 / span 1;
+}
+.item12 {
+    grid-column: 4 / span 1;
+    grid-row: 7 / span 1;
+}
+
+.item13 {
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 1;
+}
+
+.item14 {
+    grid-column: 5 / span 2;
+    grid-row: 6 / span 2;
+}
+
+.item15 {
+    grid-column: 1 / span 1;
+    grid-row: 8 / span 1;
+}
+
+.item16 {
+    grid-column: 2 / span 1;
+    grid-row: 8 / span 1;
+}
+.item17 {
+    grid-column: 3 / span 2;
+    grid-row: 8 / span 1;
+}
+
+.item18 {
+    grid-column: 5 / span 2;
+    grid-row: 8 / span 1;
+}
+
+img {
+    transition: transform 0.5s;
+}
+
+img:hover {
+    transform: scale(1.05); /* Um zoom menor para não conflitar com o clique */
+}
+
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 1000;
+    flex-direction: column; /* Organiza os filhos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    overflow: auto;
+}
+
+.fullscreen-image-container {
+    max-width: 90%;
+    max-height: 80%; /* Deixa espaço para os botões abaixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espaço entre a imagem e os botões */
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.fullscreen-nav {
+    display: flex;
+    gap: 20px; /* Espaço entre os botões */
+}
+
+.fullscreen-nav button {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.fullscreen-nav button:hover {
+    opacity: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    z-index: 1001; /* Garante que fique acima de tudo */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+.div1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 10%;
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+}
+
+.div3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 10%;
+}
+
+
+/*botão de alternar tema*/
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .switch:hover */.sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
+  
